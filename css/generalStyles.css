@@ -151,7 +151,7 @@ footer{
    
     .nav.responsive{
         animation-name: menuDropDown;
-        animation-duration: 1s;
+        animation-duration: 0.1s;
         height: 100vh;
     }
     .nav.responsive a{
