@@ -78,6 +78,7 @@ footer{
     text-align: center;
 }
 .footerfully{
+    /*5px 15px*/
     padding: 1rem 10rem;
     display: flex;
     justify-content: space-between;
@@ -150,7 +151,7 @@ footer{
    
     .nav.responsive{
         animation-name: menuDropDown;
-        animation-duration: 2s;
+        animation-duration: 1s;
         height: 100vh;
     }
     .nav.responsive a{
