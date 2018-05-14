@@ -1,0 +1,65 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+tcaption{
+    padding: 20px;
+}
+thead{
+    background-color: #333;
+    color:#f2f2f2;
+}
+th,td{
+    text-align: left;
+    padding: 5px 5px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+tr td:first-child{
+    text-align: center;
+}
+
+.buttons{
+    padding: 10px 0;
+    text-align: left;
+}
+.buttons button{
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border: 0;
+    opacity: 0.9;
+    margin-right:5px; 
+}
+.buttons button:hover{
+    opacity: 1;
+}
+#add{
+    background-color: #28a745;
+}
+#edit{
+    background-color: #007bff;
+}
+#delete{
+    background-color: #dc3545;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons{
+        text-align: center;
+    }
+    table{
+        font-size: 0.8em;
+    }
+}
+
+
+/*
+
+form pop-up configurations
+
+*/
