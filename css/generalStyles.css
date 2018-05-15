@@ -41,7 +41,6 @@ hover and active: #9D7B3A*/
 /* Change the color of links on hover */
 .nav a:hover {
     background-color: #fff;
-    color: #333;
 }
 
 /* Add an active class to highlight the current page */
