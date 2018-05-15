@@ -31,7 +31,7 @@ hover and active: #9D7B3A*/
 .nav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -40,13 +40,13 @@ hover and active: #9D7B3A*/
 
 /* Change the color of links on hover */
 .nav a:hover {
-    background-color: #333;
-    color: white;
+    background-color: #fff;
+    color: #333;
 }
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #333;
+    background-color: #fff;
 }
 .activefooter{
     color:#bb9348;
