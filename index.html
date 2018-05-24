@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="images/logotype/favicon.png" />
 
     <link rel="stylesheet" text="text/css" href="css/generalStyles.css" />
+    <link rel="stylesheet" text="text/css" href="css/table.css" />
 
     <script type="text/javascript" src="script/functions.js"></script>
 
@@ -26,17 +27,17 @@
                 </a>
             </div>
             <nav class="nav" id="topnav">
-                <a href="javascript:void(0);" style="font-size:15px;" class="icon" id="menuIcon">&#9776;</a>
-                <a href="index.html" class="active">Home</a>
-                <a href="players.html">Players</a>
-                <a href="games.html">Game Sessions</a>
+                <a href="javascript:void(0);" class="icon" id="menuIcon">&#9776;</a>
+                <a href="#home" class="active">Home</a>
+                <a href="#players">Players</a>
+                <a href="#games">Game Sessions</a>
                 <a href="statistic.html">Statistics</a>
                 <a href="#login">Login</a>
             </nav>
         </div>
     </section>
     <section class="content">
-        <div class="homecontent">
+        <section class="homecontent" id="home">
             <article>
                 <video width="50%" height="25%" controls>
                     <source src="videos/video.mov" type="video/mov">
@@ -60,48 +61,209 @@
                     pertinax incorrupte ex his.
                 </p>
             </article>
-        </div>
+        </section>
+        <section id="players">
+            <div style="overflow-x:auto;">
+                <h1>Players</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Id</th>
+                            <th>Nickname</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="adisonsoares" value="1">
+                            </td>
+                            <td>1</td>
+                            <td>Adilson Soares</td>
+                            <td>22</td>
+                            <td>Portugal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ruinunes" value="2">
+                            </td>
+                            <td>2</td>
+                            <td>Rui Nunes</td>
+                            <td>19</td>
+                            <td>Portugal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="goncaloduarte" value="3">
+                            </td>
+                            <td>3</td>
+                            <td>Gonçalo Duarte</td>
+                            <td>19</td>
+                            <td>Portugal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="adisonsoares" value="1">
+                            </td>
+                            <td>1</td>
+                            <td>Adilson Soares</td>
+                            <td>22</td>
+                            <td>Portugal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ruinunes" value="2">
+                            </td>
+                            <td>2</td>
+                            <td>Rui Nunes</td>
+                            <td>19</td>
+                            <td>Portugal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="goncaloduarte" value="3">
+                            </td>
+                            <td>3</td>
+                            <td>Gonçalo Duarte</td>
+                            <td>19</td>
+                            <td>Portugal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <button type="button" id="add" onclick="javascript:newPlayer();">Add</button>
+                <button type="button" id="edit">Edit</button>
+                <button type="button" id="delete">Delete</button>
+            </div>
+        </section>
+        <section class="gamescontent" id="games">
+            <div style="overflow-x:auto;">
+                <h1>Game Sessions</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Id</th>
+                            <th>Start Date</th>
+                            <th>Description</th>
+                            <th>Nickname</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="adisonsoares" value="1">
+                            </td>
+                            <td>1</td>
+                            <td>2018-03-27</td>
+                            <td>session 1</td>
+                            <td>Adilson Soares</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ruinunes" value="2">
+                            </td>
+                            <td>2</td>
+                            <td>2018-03-28</td>
+                            <td>session 2</td>
+                            <td>Rui Nunes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="goncaloduarte" value="3">
+                            </td>
+                            <td>3</td>
+                            <td>2018-03-29</td>
+                            <td>session 3</td>
+                            <td>Gonçalo Duarte</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="adisonsoares" value="1">
+                            </td>
+                            <td>4</td>
+                            <td>2018-04-01</td>
+                            <td>session 4</td>
+                            <td>Adilson Soares</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ruinunes" value="2">
+                            </td>
+                            <td>5</td>
+                            <td>2018-04-04</td>
+                            <td>session 5</td>
+                            <td>Rui Nunes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="goncaloduarte" value="3">
+                            </td>
+                            <td>6</td>
+                            <td>2018-03-30</td>
+                            <td>session 6</td>
+                            <td>Gonçalo Duarte</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <button type="button" id="add" onclick="javascript:newPlayer();">Add</button>
+                <button type="button" id="edit">Edit</button>
+                <button type="button" id="delete">Delete</button>
+            </div>
+        </section>
     </section>
-    <section class="footer">
-        <footer>
-            <div class="footerfully">
-                <div class="sitemap">
-                    <h4>Site Map</h4>
-                    <ul id="navfooter">
-                        <li class="activefooter">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="players.html">Players</a>
-                        </li>
-                        <li>
-                            <a href="games.html">Game Sessions</a>
-                        </li>
-                        <li>
-                            <a href="statistics.html">Statistics</a>
-                        </li>
-                        <li>
-                                <a href="login.html">Login</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contacts">
-                    <h4>Contactos</h4>
-
-                    Setúbal
-                    </br>
-
-                    &#9993; adilsonm-soares@hotmail.com
-                    </br>
-                    &#9993; rui@hotmail.com
-                    </br>
-                </div>
+    <footer>
+        <div class="footerfully">
+            <div class="shortdescription">
+                <h4>Mansa</h4>
+                <p>Lorem ipsum dolor sit amet, sed probo audiam ex, vel id agam scripta graecis, sit laudem elaboraret ne. Usu
+                    te amet atomorum evertitur, duis docendi dolores mel an. Labores omittam quaestio cu mea. Erant blandit
+                    voluptua ad duo. Mel an unum dolorum, mucius deleniti sadipscing eos at, pri numquam postulant ex. Ad
+                    quo phaedrum senserit.</p>
             </div>
-            <div class="copyright">
-                Mansa &copy; All rights reserved, 2018
+            <div class="sitemap">
+                <h4>Site Map</h4>
+                <ul id="navfooter">
+                    <li class="activefooter">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#players">Players</a>
+                    </li>
+                    <li>
+                        <a href="#games">Game Sessions</a>
+                    </li>
+                    <li>
+                        <a href="statistics.html">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
             </div>
-        </footer>
-        </secion>
+            <div class="contacts">
+                <h4>Contactos</h4>
+
+                Setúbal
+                </br>
+
+                &#9993; adilsonm-soares@hotmail.com
+                </br>
+                &#9993; rui@hotmail.com
+                </br>
+            </div>
+        </div>
+        <div class="copyright">
+            Mansa &copy; All rights reserved, 2018
+        </div>
+    </footer>
 </body>
 
 </html>

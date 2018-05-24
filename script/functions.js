@@ -35,10 +35,11 @@ function menuIconAnimation(percent) {
  */
 function mouseClickCloseMenu() {
     var menuItemsTop = document.getElementById('topnav').getElementsByTagName("a");
-    var menuItemsFooter = document.getElementById('navfooter').getElementsByTagName('li');
+    var menuItemsFooter = document.getElementById('navfooter').getElementsByTagName('a');
 
     function getElem(nodes, position, textContent) {
         for (var i = position; i < nodes.length; i++) {
+            console.log(nodes[i].textContent);
             if (nodes[i].textContent == textContent) {
                 return nodes[i];
             }
@@ -56,7 +57,7 @@ function mouseClickCloseMenu() {
 
         activeTop.className = "";
         activeFooter.className = "";
-
+        console.log(newActiveFooter);
         newActiveTop.className = "active";
         newActiveFooter.className = "activefooter";
 
