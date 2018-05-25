@@ -137,17 +137,17 @@ footer {
         display: block !important;
         text-align: left; }
   .content .homecontent {
-    padding: 50px 15px; }
+    padding: 100px 15px; }
     .content .homecontent video {
       width: 280px;
       height: 160px; }
   .content .playerscontent {
-    padding: 50px 15px; }
+    padding: 100px 15px; }
     .content .playerscontent video {
       width: 280px;
       height: 160px; }
   .content .gamescontent {
-    padding: 50px 15px; }
+    padding: 100px 15px; }
     .content .gamescontent video {
       width: 280px;
       height: 160px; }
