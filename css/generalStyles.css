@@ -6,6 +6,9 @@ body {
     font-size: 35px;
     margin: 0 0 20px 0; }
 
+/*
+    Header configurations
+*/
 .header .divmenu {
   background-color: white;
   display: flex;
@@ -38,6 +41,9 @@ body {
     .header .divmenu .nav .icon {
       display: none; }
 
+/*
+    Contents configurations
+*/
 .content .homecontent {
   padding: 5rem 10rem;
   text-align: center;
@@ -58,6 +64,9 @@ body {
   .content .gamescontent h1 {
     color: white; }
 
+/*
+    Footer configurations
+*/
 footer {
   background-color: #171717;
   color: #f2f2f2;
@@ -98,6 +107,9 @@ footer {
     padding: 0.5rem;
     font-size: 0.7em; }
 
+/*
+    media configurations
+*/
 @media screen and (max-width: 750px) {
   /*drop down effect*/
   @-moz-keyframes menuDropDown {
@@ -164,3 +176,91 @@ footer {
   footer .sitemap ul li:hover {
     /*remove hover effect from footer menu items*/
     border-bottom: 0px; } }
+
+/* The Modal (background) */
+.modal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black w/ opacity */
+  /* Modal Content */
+  /* The Close Button */
+  /* Add a background color when the inputs get focus */
+  /* Set a style for all buttons */
+  /* Extra styles for the cancel button */
+  /* Float cancel and signup buttons and add an equal width */
+  /* Clear floats */ }
+  .modal .modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; }
+  .modal .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold; }
+  .modal .close:hover,
+  .modal .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
+  .modal input[type=text],
+  .modal input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1; }
+  .modal input[type=text]:focus,
+  .modal input[type=password]:focus {
+    background-color: #ddd;
+    outline: none; }
+  .modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8; }
+  .modal button:hover {
+    opacity: 1; }
+  .modal .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336; }
+  .modal .cancelbtn,
+  .modal .signupbtn {
+    float: left;
+    width: 50%; }
+  .modal .login {
+    background-color: #171717; }
+  .modal .register {
+    background-color: #b5b5b5;
+    color: #000; }
+  .modal label {
+    float: left;
+    clear: both; }
+  .modal .clearfix {
+    clear: both; }
+  .modal .clearfix::after {
+    content: "";
+    clear: both;
+    display: table; }
