@@ -7,7 +7,7 @@ body {
     margin: 0 0 20px 0; }
 
 .header .divmenu {
-  background-color: #ffa000;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -31,40 +31,34 @@ body {
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-size: 17px;
-      /* Add an active class to highlight the current page */ }
+      font-size: 17px; }
       .header .divmenu .nav a:hover {
-        background-color: #fff; }
-      .header .divmenu .nav a .active {
-        background-color: #fff; }
+        border-bottom: 2px #171717 solid; }
     .header .divmenu .nav .icon {
       display: none; }
-    .header .divmenu .nav .active {
-      background-color: #fff; }
 
 .content .homecontent {
-  margin-top: 5%;
-  padding: 3rem 10rem;
+  padding: 5rem 10rem;
   text-align: center;
   z-index: 0;
   background-color: white; }
 
 .content .playerscontent {
-  margin-top: 5%;
-  padding: 3rem 10rem;
+  padding: 5rem 10rem;
   text-align: center;
   z-index: 0;
-  background-color: #ffa000; }
+  background-color: #ffb403; }
 
 .content .gamescontent {
-  margin-top: 5%;
-  padding: 3rem 10rem;
+  padding: 5rem 10rem;
   text-align: center;
   z-index: 0;
-  background-color: white; }
+  background-color: #171717; }
+  .content .gamescontent h1 {
+    color: white; }
 
 footer {
-  background-color: #333;
+  background-color: #171717;
   color: #f2f2f2;
   text-align: center; }
   footer .footerfully {
@@ -91,16 +85,14 @@ footer {
       footer .sitemap ul li {
         padding: 2px; }
         footer .sitemap ul li:hover {
-          color: #bb9348; }
+          border-bottom: 1px white solid; }
         footer .sitemap ul li a {
           text-decoration: none;
           color: inherit; }
-      footer .sitemap ul .activefooter {
-        color: #ffa000 !important; }
   footer .contacts {
     text-align: right; }
   footer .copyright {
-    background-color: #444;
+    background-color: #202020;
     padding: 0.5rem;
     font-size: 0.7em; }
 
@@ -128,8 +120,8 @@ footer {
     .header .divmenu .nav a:not(:first-child) {
       display: none; }
     .header .divmenu .nav a:hover {
-      /*remove hover from menu items*/
-      background-color: inherit; }
+      /*remove hover effect from header menu items*/
+      border-bottom: 0px #171717 solid; }
     .header .divmenu .nav a.icon {
       float: right;
       display: block;
@@ -168,5 +160,5 @@ footer {
     width: 75%;
     text-align: left; }
   footer .sitemap ul li:hover {
-    /*remove hover from menu items*/
-    color: inherit; } }
+    /*remove hover effect from footer menu items*/
+    border-bottom: 0px; } }
