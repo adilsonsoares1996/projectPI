@@ -36,12 +36,29 @@ body {
         background-color: #fff; }
     .header .divmenu .nav .icon {
       display: none; }
+    .header .divmenu .nav .active {
+      background-color: #fff; }
 
-.content {
+.content .homecontent {
   margin-top: 5%;
-  padding: 5rem 10rem;
+  padding: 1rem 10rem;
   text-align: center;
-  z-index: 0; }
+  z-index: 0;
+  background-color: white; }
+
+.content .playerscontent {
+  margin-top: 5%;
+  padding: 1rem 10rem;
+  text-align: center;
+  z-index: 0;
+  background-color: #ffa000; }
+
+.content .gamescontent {
+  margin-top: 5%;
+  padding: 1rem 10rem;
+  text-align: center;
+  z-index: 0;
+  background-color: white; }
 
 footer {
   background-color: #333;
@@ -55,12 +72,10 @@ footer {
     font-size: 0.8em; }
     footer .footerfully h4 {
       font: 1.5em normal;
-      margin: 10px 0; }
+      margin: 20px 0 5px 0; }
     footer .footerfully .shortdescription {
-      width: 50%; }
-  footer .footerfully h4 {
-    font: 1.5em normal;
-    margin: 10px 0; }
+      width: 50%;
+      text-align: justify; }
   footer .footerfully .shortdescription {
     width: 50%; }
   footer .sitemap {
@@ -77,6 +92,8 @@ footer {
         footer .sitemap ul li a {
           text-decoration: none;
           color: inherit; }
+      footer .sitemap ul .activefooter {
+        color: #ffa000 !important; }
   footer .contacts {
     text-align: right; }
   footer .copyright {
@@ -84,13 +101,7 @@ footer {
     padding: 0.5rem;
     font-size: 0.7em; }
 
-.active {
-  background-color: #fff; }
-
-.activefooter {
-  color: #bb9348 !important; }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   /*drop down effect*/
   @-moz-keyframes menuDropDown {
     0% {
@@ -109,35 +120,47 @@ footer {
       height: 100vh; } }
   .header .divmenu img {
     padding-left: 15px; }
-  .header .divmenu .nav a:not(:first-child) {
-    display: none; }
-  .header .divmenu .nav a:hover {
-    /*remove hover from menu items*/
-    background-color: #ffa000; }
-  .header .divmenu .nav a.icon {
-    float: right;
-    display: block;
-    text-align: right !important; }
-  .header .divmenu .nav.responsive {
-    animation-name: menuDropDown;
-    animation-duration: 0.1s;
-    height: 100vh; }
-    .header .divmenu .nav.responsive a {
-      float: none;
-      display: block !important;
-      text-align: left; }
-  .content {
+  .header .divmenu .nav {
+    padding-right: 0; }
+    .header .divmenu .nav a:not(:first-child) {
+      display: none; }
+    .header .divmenu .nav a:hover {
+      /*remove hover from menu items*/
+      background-color: inherit; }
+    .header .divmenu .nav a.icon {
+      float: right;
+      display: block;
+      text-align: right !important; }
+    .header .divmenu .nav.responsive {
+      animation-name: menuDropDown;
+      animation-duration: 0.1s;
+      height: 100vh; }
+      .header .divmenu .nav.responsive a {
+        float: none;
+        display: block !important;
+        text-align: left; }
+  .content .homecontent {
     padding: 50px 15px; }
-    .content video {
+    .content .homecontent video {
+      width: 280px;
+      height: 160px; }
+  .content .playerscontent {
+    padding: 50px 15px; }
+    .content .playerscontent video {
+      width: 280px;
+      height: 160px; }
+  .content .gamescontent {
+    padding: 50px 15px; }
+    .content .gamescontent video {
       width: 280px;
       height: 160px; }
   footer .footerfully {
     padding: 15px;
     display: block; }
     footer .footerfully .shortdescription {
-      width: 100%;
-      text-align: justify; }
-  footer .sitemap, footer .contacts {
+      width: 100%; }
+  footer .sitemap,
+  footer .contacts {
     display: block;
     width: 75%;
     text-align: left; }
