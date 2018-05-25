@@ -41,21 +41,21 @@ body {
 
 .content .homecontent {
   margin-top: 5%;
-  padding: 1rem 10rem;
+  padding: 3rem 10rem;
   text-align: center;
   z-index: 0;
   background-color: white; }
 
 .content .playerscontent {
   margin-top: 5%;
-  padding: 1rem 10rem;
+  padding: 3rem 10rem;
   text-align: center;
   z-index: 0;
   background-color: #ffa000; }
 
 .content .gamescontent {
   margin-top: 5%;
-  padding: 1rem 10rem;
+  padding: 3rem 10rem;
   text-align: center;
   z-index: 0;
   background-color: white; }
