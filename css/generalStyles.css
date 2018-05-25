@@ -14,14 +14,14 @@ body {
   top: 0;
   width: 100%;
   overflow: hidden;
-  z-index: 1; }
+  z-index: 1;
+  border-bottom: 1px #d8d8d8 solid; }
   .header .divmenu img {
     height: 40px;
     margin: 0;
     padding-top: 4px;
     padding-left: 25px; }
   .header .divmenu .nav {
-    padding-right: 25px;
     /* Style the links inside the navigation bar */
     /* Hide the link that should open and close the topnav on small screens */ }
     .header .divmenu .nav a {
@@ -29,11 +29,12 @@ body {
       display: block;
       color: #333;
       text-align: center;
-      padding: 14px 16px;
+      padding: 14px 30px;
       text-decoration: none;
-      font-size: 17px; }
+      font-size: 17px;
+      border-bottom: 2px white solid; }
       .header .divmenu .nav a:hover {
-        border-bottom: 2px #171717 solid; }
+        border-color: #171717; }
     .header .divmenu .nav .icon {
       display: none; }
 
@@ -83,9 +84,10 @@ footer {
       list-style-type: none;
       text-align: left; }
       footer .sitemap ul li {
-        padding: 2px; }
+        padding: 2px;
+        border-bottom: 1px #171717 solid; }
         footer .sitemap ul li:hover {
-          border-bottom: 1px white solid; }
+          border-color: white; }
         footer .sitemap ul li a {
           text-decoration: none;
           color: inherit; }
@@ -121,7 +123,7 @@ footer {
       display: none; }
     .header .divmenu .nav a:hover {
       /*remove hover effect from header menu items*/
-      border-bottom: 0px #171717 solid; }
+      border-color: white; }
     .header .divmenu .nav a.icon {
       float: right;
       display: block;
