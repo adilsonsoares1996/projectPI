@@ -175,7 +175,9 @@ footer {
     text-align: left; }
   footer .sitemap ul li:hover {
     /*remove hover effect from footer menu items*/
-    border-bottom: 0px; } }
+    border-bottom: 0px; }
+  .modal .modal-content {
+    width: 80%; } }
 
 /* The Modal (background) */
 .modal {
@@ -198,18 +200,28 @@ footer {
   background-color: rgba(0, 0, 0, 0.6);
   /* Black w/ opacity */
   /* Modal Content */
+  /* Style the horizontal ruler */
   /* The Close Button */
   /* Add a background color when the inputs get focus */
   /* Set a style for all buttons */
   /* Extra styles for the cancel button */
   /* Float cancel and signup buttons and add an equal width */
   /* Clear floats */ }
+  .modal * {
+    box-sizing: border-box; }
   .modal .modal-content {
     background-color: #fefefe;
-    margin: 20% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%; }
+    .modal .modal-content h1 {
+      font-size: 2em; }
+    .modal .modal-content p {
+      font-size: 1; }
+  .modal hr {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 25px; }
   .modal .close {
     color: #aaaaaa;
     float: right;
@@ -247,15 +259,15 @@ footer {
     padding: 14px 20px;
     background-color: #f44336; }
   .modal .cancelbtn,
-  .modal .signupbtn {
+  .modal .signupbtn,
+  .modal .registerbtn {
     float: left;
     width: 50%; }
-  .modal .login {
-    background-color: #171717; }
-  .modal .register {
+  .modal .registerbtn {
     background-color: #b5b5b5;
     color: #000; }
   .modal label {
+    display: block;
     float: left;
     clear: both; }
   .modal .clearfix {
