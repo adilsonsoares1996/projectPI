@@ -39,7 +39,7 @@ function mouseClickCloseMenu() {
 
     function getElem(nodes, position, textContent) {
         for (var i = position; i < nodes.length; i++) {
-            console.log(nodes[i].textContent);
+
             if (nodes[i].textContent == textContent) {
                 return nodes[i];
             }
@@ -57,7 +57,7 @@ function mouseClickCloseMenu() {
 
         activeTop.className = "";
         activeFooter.className = "";
-        console.log(newActiveFooter);
+        
         newActiveTop.className = "active";
         newActiveFooter.className = "activefooter";
 
@@ -115,41 +115,102 @@ function newPlayer() {
 
 function myaccount() {
     //if is logout
-    loginOrRegister();
+    loginMode();
     //else show account configurations
 
 }
 /**
  * This function will create the popup that will possibilite user to choose login or register option
  */
-function loginOrRegister() {
-    var divoptions = document.createElement("div");
-
-    var btnLogin = document.createElement("BUTTON");
-    btnLogin.className = "login";
-    btnLogin.appendChild(document.createTextNode("Login"));
-
-    var btnRegister = document.createElement("BUTTON");
-    btnRegister.className = "register";
-    btnRegister.appendChild(document.createTextNode("Register"));
-
-    divoptions.append(btnLogin, btnRegister);
+function loginMode() {
 
     //get the content absolute
     var content = document.getElementsByClassName("content")[0];
-    modal = popup(divoptions) //get the defaut popup with the divoptions content
 
-    //resize modal content
-    modal.getElementsByClassName("modal-content")[0].style.width = "30%";
+    var modalContent = createForm("Login","Please fill in all fields");
+    var idsToRemove=["passwordConfirmation","birthdayLabel","countryLabel"];
 
-    content.appendChild(modal);
+    removeFromForm(modalContent,idsToRemove);
+    console.log(modalContent);
+    modal = popup(modalContent,"Login","signupbtn","Register","registerbtn")
+
+
+
+    content.append(modal);
 }
+
+function removeFromForm(form,ids){
+    var child=form.childNodes;
+    child.forEach(function (current, index, array) {
+        if (ids.indexOf(current.id) > -1) {
+            form.removeChild(current);
+        }
+    });
+}
+
+function createForm(titletext,subtitletext){
+    var form = document.createElement("form");
+    
+    var title = document.createElement("h1");
+    title.id="title";
+    title.appendChild(document.createTextNode(titletext));
+
+    var subtitle = document.createElement("p");
+    subtitle.id="subtitle";
+    subtitle.appendChild(document.createTextNode(subtitletext));
+
+    var separator = document.createElement("hr");
+    
+    var nickname = document.createElement("input");
+    nickname.id="nickname";
+    nickname.type="text";
+    nickname.placeholder="Entry nickname";
+
+    var password = document.createElement("input");
+    password.id="password";
+    password.type="password";
+    password.placeholder="Entry password";
+
+    var passwordConfirmation = document.createElement("input");
+    passwordConfirmation.type="password";
+    passwordConfirmation.id="passwordConfirmation";
+    passwordConfirmation.placeholder="Confirm password";
+
+    var lblBirthday = document.createElement("label");
+    lblBirthday.appendChild(document.createTextNode("Birthday: "));
+    lblBirthday.id="birthdayLabel";
+    var birthday = document.createElement("input");
+    birthday.id="birthday";
+    birthday.type="date";
+    birthday.min="1979-12-31";
+
+    var lblCountry = document.createElement("label");
+    lblCountry.id="countryLabel";
+    lblCountry.appendChild(document.createTextNode("Country: "));
+    var countrySelector = document.createElement("select");
+    countrySelector.id="countrySelector";
+    var option= document.createElement("option");
+    option.id="optionSelector";
+    option.value="portugal";
+
+
+    lblBirthday.append(birthday,document.createElement("br"),document.createElement("br"));
+
+    countrySelector.appendChild(option);
+    lblCountry.appendChild(countrySelector);
+
+    
+    form.append(title,subtitle,separator,nickname,password,passwordConfirmation,lblBirthday,lblCountry);
+
+    return form;
+}   
+
 
 /**
  * function that return a pop-up with the content passed in param
- * @param {HTMLElement} content - the content that will be in the popup content
+ * @param {HTMLElement} content - the content that will be in the popup content,normally is a form
  */
-function popup(content) {
+function popup(content, firstBtnText, firstBtnClass, secondBtnText, secondBtnClass) {
     //is used for example to choose login or register, to show register form and others
     var modal = document.createElement("div");
     modal.className = "modal";
@@ -162,9 +223,30 @@ function popup(content) {
     spanClose.className = "close";
     spanClose.innerHTML = "&times;";
 
+
+
+    /* Create bottom buttons (inicio)*/
+    var divbtns = document.createElement("div");
+    divbtns.className = "clearfix";
+
+    var firstbtn = document.createElement("BUTTON");
+    firstbtn.className = firstBtnClass;
+    firstbtn.type="submit";
+    firstbtn.appendChild(document.createTextNode(firstBtnText));
+
+    var secondbtn = document.createElement("BUTTON");
+    secondbtn.className = secondBtnClass;
+    secondbtn.type = "button";
+    secondbtn.appendChild(document.createTextNode(secondBtnText));
+
+    divbtns.append(firstbtn, secondbtn);
+    /* Create bottom buttons (inicio)*/
+
+    content.appendChild(divbtns);
     modalContent.append(spanClose, content);
 
     modal.appendChild(modalContent);
+
 
     //setup behavior
 
